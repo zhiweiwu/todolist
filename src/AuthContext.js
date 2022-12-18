@@ -31,7 +31,6 @@ export function AuthProvider({children}){
       try{
           setError('')
         const userCredential= await signInWithEmailAndPassword(auth,email,password);
-        setError('sucess!')
         setLoggedIn(true)
         console.log(userCredential.user);
         navigate('/todolist')
